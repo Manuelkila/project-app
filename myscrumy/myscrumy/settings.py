@@ -73,23 +73,20 @@ WSGI_APPLICATION = 'myscrumy.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-import pymysql
+#import pymysql
 
 DATABASES = {
     'default':  {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'myscrumy',
-        'USER': 'admin',
-        'PASSWORD' : '1234Emmanuel.',
-        'HOST': 'localhost',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     
         
         
     }
 }
 
-pymysql.version_info =(1,4,2, 'final',0)
-pymysql.install_as_MySQLdb()
+#pymysql.version_info =(1,4,2, 'final',0)
+#pymysql.install_as_MySQLdb()
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
